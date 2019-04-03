@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Logo from "./Logo";
 import Title from "./Title";
 import MemoList from "./MemoList";
-import "./App.css";
+import "./styles/App.css";
 
 class App extends Component {
   render() {

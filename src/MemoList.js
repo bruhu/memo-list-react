@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./MemoList.css";
+import "./styles/MemoList.css";
 import ItemsList from "./ItemsList";
 
 export class MemoList extends Component {

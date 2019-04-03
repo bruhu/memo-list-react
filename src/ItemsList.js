@@ -1,6 +1,6 @@
 // rce -> shortcut for this
 import React, { Component } from "react";
-import "./ItemsList.css";
+import "./styles/ItemsList.css";
 
 export class ItemsList extends Component {
   render() {
