@@ -9,6 +9,7 @@ export class MemoList extends Component {
       // what we type in the input field will be stored in text
       text: "",
       // items is where we will store what is written once we click the add button
+      // data should be an empty array or what we have in the local storage
       items: []
     };
   }
@@ -29,12 +30,18 @@ export class MemoList extends Component {
       //because we saved the text from the input in the state
       text: this.state.text
     };
+
+    const newItems = this.state.items.concat(newItem);
+
     this.setState(state => ({
       items: state.items.concat(newItem),
       text: ""
     }));
-    // callback function ttht takes the state, does something for the items and then we empty the state (w/ text:'') to prevent saving something multiple times - reset what we typed
+    // callback function that takes the state, does something for the items and then we empty the state (w/ text:'') to prevent saving something multiple times - reset what we typed
     //setState is not really enough in this case bc we want to concatenate stuff
+
+    //we use JSON.stringify so it does not store object object but an actual string
+    localStorage.setItem("items", JSON.stringify(newItems));
   };
 
   render() {
