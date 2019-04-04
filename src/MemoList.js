@@ -5,12 +5,16 @@ import ItemsList from "./ItemsList";
 export class MemoList extends Component {
   constructor(props) {
     super(props);
+
+    this.localStorage = JSON.parse(localStorage.getItem("items"));
+    this.items = this.localStorage !== null ? this.localStorage : [];
+
     this.state = {
       // what we type in the input field will be stored in text
       text: "",
       // items is where we will store what is written once we click the add button
       // data should be an empty array or what we have in the local storage
-      items: []
+      items: this.items
     };
   }
   // handleChange is now a new method of this class
