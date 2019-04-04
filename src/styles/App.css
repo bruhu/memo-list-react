@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  background-image: url("./img/cuadros.png");
+  background-image: linear-gradient(rgb(4, 31, 49), rgb(73, 107, 68));
+  /* background-image: url("./img/cuadros.png"); */
 }
 
 .App-logo {
